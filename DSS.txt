@@ -1,0 +1,106 @@
+///Data curation and management using NOSQL and R///
+#Connecting from R to noSQL format database.
+There are several packages for R that let you connect to #document-based noSQL databases,
+including CouchDB and #MongoDB.
+library(sofa)
+library (R4CouchDB)
+library(couchDB) 
+#Connecting to CouchDB and Creating a New Database from R
+#Using the sofa library in Rx
+#Open R and install the sofa package,
+install.packages(devtools)
+devtools::install github ropensci/sola"),
+library (sofa) #The function cushion lets us create a connection to CouchDB.
+cushion(name cdb, user= pwdtype="localhost")
+#To check whether couch is running
+ping(odb
+#certain commands can use to know about the database like
+Scouchdb, Suuid, Sversion, Svendar, Svendor name
+#The db list) command will show us a new list of databases #currently stored in Couch. The
+replicator" and user #databases are created by default.
+db_list(odb")
+#To make a new database (called pp), with the db_create() #command and then run db_list()
+again:
+db.create("odb, dbname='pp)
+db list Codb")
+NOSQL
+#To get the data from json file from r framework.
+library(jsonlite)
+# First we read in some Etho Core style JSON documents...
+path <--/Desktop/diary.txt"
+d<-as.data.frame(fromJSON(path))
+#To add the data and here we can make a key :value pair as #follow.
+for (i in 1:nrow(d)){
+doc <- as.list(d[i])
+doc_create(doc, cushion="edb", dbname="pp", docid= doc$eventID){
+#To read these out of CouchDB by using doc_get) and #specifying their Couch "_id".
+for (i in seventID) {
+res <-doe_get(cushion="edb", dbname="pp", docid=i)
+res
+}
+#To update a particular document in CouchDB, use doc_update(). 
+res <-doc_get(cushion="cdb", dbname="pp", docid="OS17016")
+//////Data Curation and Management using MongoDB and R//////
+#To install Mongo db
+library(devtools)
+#To connect the mongo DB with R
+library (mongodb)
+mongo = mongo.create(host ="localhost)
+mongo.is.connected(mongo)
+///Principal component Analysis///
+# Load the data
+data (iris)
+head(iris)
+////K mean Clustering////
+#import the data set 
+library(datasets)
+#it will display the headings of the dataset along with few r#ows
+head(iris)
+///Time series forecasting///
+#consider the inbuilt date set Air Passengers
+data(AirPassengers")
+
+to know the format of data set here ts will tell that the #data set belongs to time series format 
+class (AirPassengers)
+Output:-"ts"
+To know the start of time series
+start( AirPassengers)
+Output: 1949 1
+#To know the end of time series
+end( AirPassengers)
+Output:-1960 12
+#To know the frequency of the data set here 12 means that the #time series is on monthly basis
+frequency(AirPassengers)
+Output: 12
+#To know the mean median ete of the dataset
+suminary (Air Passengers)
+/////Simple/Multiple Linear regression////
+Consider some data ent
+height (102,117,105,141,185,116,138,144,137,100,131,119,115.121.113)
+weight (61,4,6,54,60.60.51.50.46.64.40.56,64,48,59)
+#lm is for Linear regression
+student im(night-height)
+sudent
+#To Predict use Predict command
+predict(student.data.framefheight 199),interval="confidence")
+#To Plot this data
+plot(student)
+//////Logistic Regression////
+rm(list=ls())
+library(ISLR)
+names(Smarket)
+////Hypothesis Testing/////
+#create random data
+dataf<- seq(1,20,by=1)
+dataf
+////Analysis pf Variance////
+#import inbuilt dataset
+data("warpbreaks")
+head(warpbreaks)
+//////Decision Tree/////
+rm(list = ls())
+library(tree)
+library(ISLR)
+attach(Carseats)
+?Carseats
+summary(Carseats)
